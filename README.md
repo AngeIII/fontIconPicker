@@ -1,6 +1,10 @@
 jQuery fontIconPicker
 ==============
 
+
+## Modified for Visual Composer
+Modification needed for add compatibility for fontawesome icons.
+
 jQuery fontIconPicker is a small (`3.22KB` gzipped) jQuery plugin which allows you to include an elegant icon picker with categories, search and pagination inside your administration forms. The list of icons can be loaded manually using a `SELECT` field, an `Array` or `Object` of icons or directly from a Fontello `config.json` or IcoMoon `selection.json` file. Go to the [official plugin page](http://codeb.it/fonticonpicker) for examples and documentation.
 
 ![fontIconPickers](/demo/github-img.png)

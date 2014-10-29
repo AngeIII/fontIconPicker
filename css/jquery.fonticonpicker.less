@@ -1,0 +1,194 @@
+/**
+ * CSS file for fontIconPicker
+ * This file holds the basic CSS
+ * {@link https://github.com/micc83/fontIconPicker}
+ */
+/* Reset (thx to Eric A. and Kathryn S. Meyer) */
+.icons-selector {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+
+    /* Display */
+    display: block;
+    vertical-align: middle;
+    text-align: left;
+    margin-bottom: 4px;
+
+    &:before,
+    &:after,
+    *,
+    *:before,
+    *:after {
+        -webkit-box-sizing: content-box;
+        -moz-box-sizing: content-box;
+        box-sizing: content-box;
+    }
+
+    /* Icon selector */
+    .selector {
+        width: 100px;
+        height: 40px;
+    }
+
+    /* Selector open button */
+    .selector-button {
+        width: 39px;
+        height: 100%;
+        display: block;
+        text-align: center;
+        cursor: pointer;
+        float: left;
+
+        /* Selector open button icon */
+        i {
+            line-height: 38px;
+            text-align: center;
+        }
+    }
+
+    /* Selected icon container */
+    .selected-icon {
+        display: block;
+        width: 60px;
+        height: 100%;
+        float: left;
+        text-align: center;
+
+        /* Selected icon */
+        i {
+            line-height: 40px;
+            font-size: 18px;
+            cursor: default;
+        }
+    }
+
+    /* IconPicker Popup */
+    .selector-popup {
+        background-color: #fefefe;
+        padding: 5px 5px 20px;
+        height: auto;
+        margin-top: -1px;
+        width: 100%;
+        box-sizing: border-box;
+
+    }
+
+    .selector-search input[type="text"],
+    .selector-category select {
+        border: 0;
+        line-height: 20px;
+        padding: 10px 2.5%;
+        width: 100%;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        margin-bottom: 5px;
+        font-size: 12px;
+        display: block; /* Fixes the positioning inside hidden/floated/text-aligned elements, where it would leave a margin */
+    }
+
+    .selector-category select {
+        height: 40px;
+        option {
+            padding: 10px;
+        }
+    }
+
+    /* Search input placeholder */
+    input::-webkit-input-placeholder,
+    input:-moz-placeholder,
+    input::-moz-placeholder,
+    input:-ms-input-placeholder {
+        text-transform: uppercase;
+    }
+
+    /* Search and cancel icon */
+    .selector-search {
+        position: relative;
+
+        i {
+            position: absolute;
+            right: 10px;
+            top: 30%;
+            cursor: pointer;
+        }
+    }
+
+    /* Icon Container inside Popup */
+    .fip-icons-container {
+        width: 100%;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        padding: 5px;
+        overflow: auto;
+        max-height: 300px;
+
+        .loading {
+            font-size: 24px;
+            margin: 0 auto;
+            padding: 20px 0;
+            text-align: center;
+            width: 100%;
+        }
+
+        /* Single icon box */
+        .fip-box {
+            display: inline-block;
+            margin: 2px;
+            width: 60px;
+            line-height: 42px;
+            text-align: center;
+            cursor: pointer;
+            vertical-align: top;
+            height: 40px;
+
+            .fip-block-icon {
+                opacity: 0.5;
+                cursor: not-allowed;
+            }
+        }
+    }
+
+    /* Popup footer */
+    .selector-footer {
+        line-height: 12px;
+        padding: 5px 5px 0 5px;
+        text-align: center;
+        font-size: 14px;
+
+        /* Pagination and footer icons */
+        i {
+            font-size: 14px;
+        }
+
+        /* Total icons */
+        em {
+            font-style: italic;
+        }
+    }
+
+    /* Pagination arrows container */
+    .selector-arrows {
+        float: right;
+        i {
+            cursor: pointer;
+        }
+    }
+
+    /* Pagination text */
+    .selector-pages {
+        font-size: 11px;
+        float: left;
+    }
+
+    /* No icons found */
+    .icons-picker-error i:before {
+        color: #eee;
+    }
+
+}
