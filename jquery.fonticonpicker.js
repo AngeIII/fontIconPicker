@@ -20,7 +20,7 @@
 
 	// Create the defaults once
 	var defaults = {
-		theme: 'fip-grey',              // The CSS theme to use with this fontIconPicker. You can set different themes on multiple elements on the same page
+		theme: 'fip-vc-theme-grey',              // The CSS theme to use with this fontIconPicker. You can set different themes on multiple elements on the same page
 		source: false,                   // Icons source (array|false|object)
 		emptyIcon: true,                    // Empty icon should be shown?
 		emptyIconValue: '',                      // The value of the empty icon, change if you select has something else, say "none"
@@ -40,7 +40,8 @@
 		iconCancelClass: 'fip-icon-cancel',       // Class for search canceling
 		iconSpinClass: 'fip-icon-spin3',        // Class for fip-icon-spin3
 		iconBlockClass: 'fip-icon-block',        // Class for block(none icon)
-		searchPlaceholder: 'Search Icon'            // Search icon text placeholder
+		searchPlaceholder: 'Search Icon',            // Search icon text placeholder
+		mainClass: 'vc-icons-selector'
 	};
 
 	// The actual plugin constructor
@@ -51,7 +52,7 @@
 			this.settings.iconsPerPage--;
 		}
 		this.iconPicker = $('<div/>', {
-			'class': 'icons-selector',
+			'class': this.settings.mainClass,
 			style: 'position: relative',
 			html: '<div class="selector">' +
 			'<span class="selected-icon">' +

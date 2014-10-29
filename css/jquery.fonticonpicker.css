@@ -4,7 +4,7 @@
  * {@link https://github.com/micc83/fontIconPicker}
  */
 /* Reset (thx to Eric A. and Kathryn S. Meyer) */
-.icons-selector {
+.vc-icons-selector {
   margin: 0;
   padding: 0;
   border: 0;
@@ -28,20 +28,20 @@
   /* Pagination text */
   /* No icons found */
 }
-.icons-selector:before,
-.icons-selector:after,
-.icons-selector *,
-.icons-selector *:before,
-.icons-selector *:after {
+.vc-icons-selector:before,
+.vc-icons-selector:after,
+.vc-icons-selector *,
+.vc-icons-selector *:before,
+.vc-icons-selector *:after {
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
   box-sizing: content-box;
 }
-.icons-selector .selector {
+.vc-icons-selector .selector {
   width: 100px;
   height: 40px;
 }
-.icons-selector .selector-button {
+.vc-icons-selector .selector-button {
   width: 39px;
   height: 100%;
   display: block;
@@ -50,11 +50,11 @@
   float: left;
   /* Selector open button icon */
 }
-.icons-selector .selector-button i {
+.vc-icons-selector .selector-button i {
   line-height: 38px;
   text-align: center;
 }
-.icons-selector .selected-icon {
+.vc-icons-selector .selected-icon {
   display: block;
   width: 60px;
   height: 100%;
@@ -62,12 +62,12 @@
   text-align: center;
   /* Selected icon */
 }
-.icons-selector .selected-icon i {
+.vc-icons-selector .selected-icon i {
   line-height: 40px;
   font-size: 18px;
   cursor: default;
 }
-.icons-selector .selector-popup {
+.vc-icons-selector .selector-popup {
   background-color: #fefefe;
   padding: 5px 5px 20px;
   height: auto;
@@ -75,8 +75,8 @@
   width: 100%;
   box-sizing: border-box;
 }
-.icons-selector .selector-search input[type="text"],
-.icons-selector .selector-category select {
+.vc-icons-selector .selector-search input[type="text"],
+.vc-icons-selector .selector-category select {
   border: 0;
   line-height: 20px;
   padding: 10px 2.5%;
@@ -89,28 +89,28 @@
   display: block;
   /* Fixes the positioning inside hidden/floated/text-aligned elements, where it would leave a margin */
 }
-.icons-selector .selector-category select {
+.vc-icons-selector .selector-category select {
   height: 40px;
 }
-.icons-selector .selector-category select option {
+.vc-icons-selector .selector-category select option {
   padding: 10px;
 }
-.icons-selector input::-webkit-input-placeholder,
-.icons-selector input:-moz-placeholder,
-.icons-selector input::-moz-placeholder,
-.icons-selector input:-ms-input-placeholder {
+.vc-icons-selector input::-webkit-input-placeholder,
+.vc-icons-selector input:-moz-placeholder,
+.vc-icons-selector input::-moz-placeholder,
+.vc-icons-selector input:-ms-input-placeholder {
   text-transform: uppercase;
 }
-.icons-selector .selector-search {
+.vc-icons-selector .selector-search {
   position: relative;
 }
-.icons-selector .selector-search i {
+.vc-icons-selector .selector-search i {
   position: absolute;
   right: 10px;
   top: 30%;
   cursor: pointer;
 }
-.icons-selector .fip-icons-container {
+.vc-icons-selector .fip-icons-container {
   width: 100%;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -120,14 +120,14 @@
   max-height: 300px;
   /* Single icon box */
 }
-.icons-selector .fip-icons-container .loading {
+.vc-icons-selector .fip-icons-container .loading {
   font-size: 24px;
   margin: 0 auto;
   padding: 20px 0;
   text-align: center;
   width: 100%;
 }
-.icons-selector .fip-icons-container .fip-box {
+.vc-icons-selector .fip-icons-container .fip-box {
   display: inline-block;
   margin: 2px;
   width: 60px;
@@ -137,11 +137,11 @@
   vertical-align: top;
   height: 40px;
 }
-.icons-selector .fip-icons-container .fip-box .fip-block-icon {
+.vc-icons-selector .fip-icons-container .fip-box .fip-block-icon {
   opacity: 0.5;
   cursor: not-allowed;
 }
-.icons-selector .selector-footer {
+.vc-icons-selector .selector-footer {
   line-height: 12px;
   padding: 5px 5px 0 5px;
   text-align: center;
@@ -149,22 +149,22 @@
   /* Pagination and footer icons */
   /* Total icons */
 }
-.icons-selector .selector-footer i {
+.vc-icons-selector .selector-footer i {
   font-size: 14px;
 }
-.icons-selector .selector-footer em {
+.vc-icons-selector .selector-footer em {
   font-style: italic;
 }
-.icons-selector .selector-arrows {
+.vc-icons-selector .selector-arrows {
   float: right;
 }
-.icons-selector .selector-arrows i {
+.vc-icons-selector .selector-arrows i {
   cursor: pointer;
 }
-.icons-selector .selector-pages {
+.vc-icons-selector .selector-pages {
   font-size: 11px;
   float: left;
 }
-.icons-selector .icons-picker-error i:before {
+.vc-icons-selector .icons-picker-error i:before {
   color: #eee;
 }
