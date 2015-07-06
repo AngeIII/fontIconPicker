@@ -1,5 +1,5 @@
 /**
- *  jQuery fontIconPicker - v2.0.1
+ *  jQuery fontIconPicker - v2.1
  *
  *  An icon picker built on top of font icons and jQuery
  *
@@ -339,8 +339,8 @@
 				if ( this.currentPage < this.totalPage ) {
 					this.iconPicker.find( '.selector-arrow-left' ).show();
 					this.currentPage = this.currentPage + 1;
-					this.renderIcons();
 					this.renderIconContainer();
+					this.renderIcons();
 				}
 
 				if ( this.currentPage === this.totalPage ) {
@@ -357,8 +357,8 @@
 				if ( this.currentPage > 1 ) {
 					this.iconPicker.find( '.selector-arrow-right' ).show();
 					this.currentPage = this.currentPage - 1;
-					this.renderIcons();
 					this.renderIconContainer();
+					this.renderIcons();
 				}
 
 				if ( this.currentPage === 1 ) {
@@ -403,9 +403,9 @@
 				}, this ) );
 				// Filter duplicates
 				this.iconsSearched = this.iconsSearched.filter( this.getOnlyUnique );
-				this.renderIcons();
 				// Render icon list
 				this.renderIconContainer();
+				this.renderIcons();
 			}, this ) );
 
 			/**
@@ -603,7 +603,7 @@
 
 				// Render icons
 				this.renderIconContainer();
-
+				this.setContainerSelectedItems();
 			}
 
 		},
@@ -679,6 +679,9 @@
 			 }).appendTo(this.iconContainer);
 			 }*/
 
+		},
+
+		setContainerSelectedItems: function () {
 			// If no empty icon is allowed and no current value is set or current value is not inside the icon set
 			if ( ! this.settings.emptyIcon && (! this.element.val() || $.inArray( this.element.val(),
 					this.settings.source ) === - 1) ) {
@@ -696,9 +699,7 @@
 				// Set the default selected icon even if not set
 				this.setSelectedIcon( this.element.val() );
 			}
-
 		},
-
 		/**
 		 * Set Highlighted icon
 		 */
@@ -761,7 +762,7 @@
 			}
 		},
 
-		renderIcons: function() {
+		renderIcons: function () {
 			for ( var i = 0, item;
 				  item = this.iconsPaged[ i ++ ]; ) {
 				// Set the icon title
@@ -782,6 +783,7 @@
 					title: flipBoxTitle
 				} ).appendTo( this.iconContainer );
 			}
+			this.setContainerSelectedItems();
 		},
 
 		/**
@@ -801,9 +803,9 @@
 			this.currentPage = 1;
 			this.isSearch = false;
 
-			this.renderIcons();
 			// Rerender icons
 			this.renderIconContainer();
+			this.renderIcons();
 
 			// Restore pagination if needed
 			if ( this.totalPage > 1 ) {
