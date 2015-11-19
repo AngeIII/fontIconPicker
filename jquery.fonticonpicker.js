@@ -687,7 +687,7 @@
 					this.settings.source ) === - 1) ) {
 
 				// Get the first icon
-				this.setSelectedIcon( iconsPaged[ 0 ] );
+				this.setSelectedIcon( this.iconsPaged[ 0 ] );
 
 			} else if ( $.inArray( this.element.val(), this.settings.source ) === - 1 ) {
 
