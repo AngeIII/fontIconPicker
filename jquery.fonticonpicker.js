@@ -1,5 +1,5 @@
 /**
- *  jQuery fontIconPicker - v2.1
+ *  jQuery fontIconPicker - v2.1.1
  *
  *  An icon picker built on top of font icons and jQuery
  *
@@ -603,6 +603,7 @@
 
 				// Render icons
 				this.renderIconContainer();
+				this.renderIcons();
 				this.setContainerSelectedItems();
 			}
 
