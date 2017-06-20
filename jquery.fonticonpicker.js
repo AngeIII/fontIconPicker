@@ -1,5 +1,5 @@
 /**
- *  jQuery fontIconPicker - v2.2
+ *  jQuery fontIconPicker - v2.3
  *
  *  An icon picker built on top of font icons and jQuery
  *
@@ -62,10 +62,10 @@
 			'</span>' +
 			'</div>' +
 			'<div class="selector-popup" style="display: none;">' + ((this.settings.hasSearch) ?
-			'<div class="selector-search">' +
-			'<input type="text" name="" value="" placeholder="' + this.settings.searchPlaceholder + '" class="icons-search-input"/>' +
-			'<i class="' + this.settings.iconSearchClass + '"></i>' +
-			'</div>' : '') +
+				'<div class="selector-search">' +
+				'<input type="text" name="" value="" placeholder="' + this.settings.searchPlaceholder + '" class="icons-search-input"/>' +
+				'<i class="' + this.settings.iconSearchClass + '"></i>' +
+				'</div>' : '') +
 			'<div class="selector-category">' +
 			'<select name="" class="icon-category-select" style="display: none">' +
 			'</select>' +
@@ -945,7 +945,7 @@
 			if ( this.settings.useAttribute ) {
 				if ( theIcon ) {
 					this.iconPicker.find( '.selected-icon' ).html( '<i ' + this.settings.attributeName + '="' + ( this.settings.convertToHex ? '&#x' + parseInt( theIcon,
-							10 ).toString( 16 ) + ';' : theIcon ) + '"></i>' );
+								10 ).toString( 16 ) + ';' : theIcon ) + '"></i>' );
 				} else {
 					this.iconPicker.find( '.selected-icon' ).html( '<i class="fip-block-icon ' + this.settings.iconBlockClass + '"></i>' );
 				}
@@ -977,6 +977,7 @@
 			if ( this.open ) {
 				this.iconPicker.find( '.icons-search-input' ).focus().select();
 				if ( ! this.initialized ) {
+					this.renderIconContainer();
 					this.renderIcons();
 					this.initialized = true;
 				}
@@ -984,8 +985,10 @@
 		},
 
 		renderIcons: function () {
-			for ( var i = 0, item;
-				  item = this.iconsPaged[ i ++ ]; ) {
+			for ( var i = 0;
+				  i < this.iconsPaged.length;
+				  i ++ ) {
+				var item = this.iconsPaged[ i ];
 				// Set the icon title
 				var flipBoxTitle = item;
 				$.grep( this.settings.source, $.proxy( function ( e, i ) {
@@ -999,7 +1002,7 @@
 				// Set the icon box
 				$( '<span/>', {
 					html: '<i data-fip-value="' + item + '" ' + (this.settings.useAttribute ? (this.settings.attributeName + '="' + ( this.settings.convertToHex ? '&#x' + parseInt( item,
-						10 ).toString( 16 ) + ';' : item ) + '"') : 'class="' + item + '"') + '></i>',
+							10 ).toString( 16 ) + ';' : item ) + '"') : 'class="' + item + '"') + '></i>',
 					'class': 'fip-box',
 					title: flipBoxTitle
 				} ).appendTo( this.iconContainer );
