@@ -34,7 +34,6 @@
 .vc-icons-selector *:before,
 .vc-icons-selector *:after {
   -webkit-box-sizing: content-box;
-  -moz-box-sizing: content-box;
   box-sizing: content-box;
 }
 .vc-icons-selector .selector {
@@ -73,7 +72,8 @@
   height: auto;
   margin-top: -1px;
   width: 100%;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 .vc-icons-selector .selector-search input[type="text"],
 .vc-icons-selector .selector-category select {
@@ -81,7 +81,6 @@
   line-height: 20px;
   padding: 10px 2.5%;
   width: 100%;
-  -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   margin-bottom: 5px;
@@ -112,7 +111,6 @@
 }
 .vc-icons-selector .fip-icons-container {
   width: 100%;
-  -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   padding: 5px;

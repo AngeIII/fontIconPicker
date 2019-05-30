@@ -216,7 +216,7 @@
 			/**
 			 * On down arrow click
 			 */
-			this.iconPicker.find( '.selector-button' ).click( $.proxy( function () {
+			this.iconPicker.find( '.selector-button' ).on( 'click', $.proxy( function () {
 				if ( ! this.open && first ) {
 					first = false;
 					this.initCategories();
@@ -229,7 +229,7 @@
 			/**
 			 * Next page
 			 */
-			this.iconPicker.find( '.selector-arrow-right' ).click( $.proxy( function ( e ) {
+			this.iconPicker.find( '.selector-arrow-right' ).on( 'click', $.proxy( function ( e ) {
 
 				if ( this.currentPage < this.totalPage ) {
 					this.iconPicker.find( '.selector-arrow-left' ).show();
@@ -247,7 +247,7 @@
 			/**
 			 * Prev page
 			 */
-			this.iconPicker.find( '.selector-arrow-left' ).click( $.proxy( function ( e ) {
+			this.iconPicker.find( '.selector-arrow-left' ).on( 'click', $.proxy( function ( e ) {
 
 				if ( this.currentPage > 1 ) {
 					this.iconPicker.find( '.selector-arrow-right' ).show();
@@ -265,7 +265,7 @@
 			/**
 			 * Realtime Icon Search
 			 */
-			this.iconPicker.find( '.icons-search-input' ).keyup( $.proxy( function ( e ) {
+			this.iconPicker.find( '.icons-search-input' ).on( 'keyup', $.proxy( function ( e ) {
 
 				// Get the search string
 				var searchString = $( e.currentTarget ).val();
@@ -322,7 +322,7 @@
 			/**
 			 * Stop click propagation on iconpicker
 			 */
-			this.iconPicker.click( function ( event ) {
+			this.iconPicker.on( 'click', function ( event ) {
 				event.stopPropagation();
 				return false;
 			} );
@@ -330,7 +330,7 @@
 			/**
 			 * On click out
 			 */
-			$( 'html' ).click( $.proxy( function () {
+			$( 'html' ).on( 'click', $.proxy( function () {
 				if ( this.open ) {
 					this.toggleIconSelector();
 				}
@@ -436,7 +436,7 @@
 			/**
 			 * On down arrow click
 			 */
-			this.iconPicker.find( '.selector-button' ).click( $.proxy( function () {
+			this.iconPicker.find( '.selector-button' ).on( 'click', $.proxy( function () {
 
 				// Open/Close the icon picker
 				this.toggleIconSelector();
@@ -446,7 +446,7 @@
 			/**
 			 * Next page
 			 */
-			this.iconPicker.find( '.selector-arrow-right' ).click( $.proxy( function ( e ) {
+			this.iconPicker.find( '.selector-arrow-right' ).on( 'click', $.proxy( function ( e ) {
 
 				if ( this.currentPage < this.totalPage ) {
 					this.iconPicker.find( '.selector-arrow-left' ).show();
@@ -464,7 +464,7 @@
 			/**
 			 * Prev page
 			 */
-			this.iconPicker.find( '.selector-arrow-left' ).click( $.proxy( function ( e ) {
+			this.iconPicker.find( '.selector-arrow-left' ).on( 'click', $.proxy( function ( e ) {
 
 				if ( this.currentPage > 1 ) {
 					this.iconPicker.find( '.selector-arrow-right' ).show();
@@ -482,7 +482,7 @@
 			/**
 			 * Realtime Icon Search
 			 */
-			this.iconPicker.find( '.icons-search-input' ).keyup( $.proxy( function ( e ) {
+			this.iconPicker.find( '.icons-search-input' ).on( 'keyup', $.proxy( function ( e ) {
 
 				// Get the search string
 				var searchString = $( e.currentTarget ).val();
@@ -539,7 +539,7 @@
 			/**
 			 * Stop click propagation on iconpicker
 			 */
-			this.iconPicker.click( function ( event ) {
+			this.iconPicker.on( 'click', function ( event ) {
 				event.stopPropagation();
 				return false;
 			} );
@@ -547,7 +547,7 @@
 			/**
 			 * On click out
 			 */
-			$( 'html' ).click( $.proxy( function () {
+			$( 'html' ).on( 'click', $.proxy( function () {
 				if ( this.open ) {
 					this.toggleIconSelector();
 				}
